@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
       src="logo.svg"
     />
     <h2>
-      Welcome to React deneme
+      Welcome to React
     </h2>
   </div>
   <p
