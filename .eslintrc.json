@@ -18,6 +18,10 @@
         "react/require-extension": 0,
         "no-console": 0,
         "no-param-reassign": 0,
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
         "prettier/prettier": [
             "error",
             {
