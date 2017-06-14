@@ -20,7 +20,7 @@ const Address = props =>
     <br />
     <IndexLink activeClassName="active" to="/address">Twitter Sayfası</IndexLink>&nbsp;&nbsp;
     <IndexLink activeClassName="active" to="/address/instagram">Instagram Sayfası</IndexLink>
-    <h1>Süleyman Demirel Üniversitesi Bilgi İşlem Daire Başkanlığı</h1>
+    <h1>Süleyman Demirel Üniversitesi Bilgi İşlem Daire Başkanlığıf</h1>
     {props.children}
   </div>;
 const Instagram = () => <h3>Instagram Sayfası</h3>;
