@@ -9,6 +9,35 @@ const App = () => <Menu />;
 
 export default App;
 
+const Hakkımızda = props =>
+  <div>
+    <h3>Hakkımızda Sayfası</h3>
+    <h2>{props.params.isim}</h2>
+  </div>;
+
+const Address = props =>
+  <div>
+    <br />
+    <IndexLink activeClassName="active" to="/address">Twitter Sayfası</IndexLink>&nbsp;&nbsp;
+    <IndexLink activeClassName="active" to="/address/instagram">Instagram Sayfası</IndexLink>
+    <h1>Süleyman Demirel Üniversitesi Bilgi İşlem Daire Başkanlığı</h1>
+    {props.children}
+  </div>;
+const Instagram = () => <h3>Instagram Sayfası</h3>;
+const TwitterFeed = () => <h3>Twitter Sayfası</h3>;
+
+const HiyerarsikComponents = props =>
+  <div>
+    {props.title}
+    {props.subTitle}
+  </div>;
+const Title = () => <h1>Başlık</h1>;
+const SubTitle = () => <h1>Alt Başlık</h1>;
+
+const Query = props => <h2>{props.location.query.message}</h2>;
+
+const NotFound = () => <h1>404.. This page is not found!</h1>;
+
 const Container = props => <div><Nav />{props.children}</div>;
 
 //* *****************************************Menu Start
@@ -45,32 +74,3 @@ const Nav = () =>
       Route Query
     </IndexLink>
   </div>;
-
-const Hakkımızda = props =>
-  <div>
-    <h3>Hakkımızda Sayfası</h3>
-    <h2>{props.params.isim}</h2>
-  </div>;
-
-const Address = props =>
-  <div>
-    <br />
-    <IndexLink activeClassName="active" to="/address">Twitter Sayfası</IndexLink>&nbsp;&nbsp;
-    <IndexLink activeClassName="active" to="/address/instagram">Instagram Sayfası</IndexLink>
-    <h1>Süleyman Demirel Üniversitesi Bilgi İşlem Daire Başkanlığı</h1>
-    {props.children}
-  </div>;
-const Instagram = () => <h3>Instagram Sayfası</h3>;
-const TwitterFeed = () => <h3>Twitter Sayfası</h3>;
-
-const HiyerarsikComponents = props =>
-  <div>
-    {props.title}
-    {props.subTitle}
-  </div>;
-const Title = () => <h1>Başlık</h1>;
-const SubTitle = () => <h1>Alt Başlık</h1>;
-
-const Query = props => <h2>{props.location.query.message}</h2>;
-
-const NotFound = () => <h1>404.. This page is not found!</h1>;
