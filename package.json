@@ -38,7 +38,7 @@
     "precommit": "lint-staged",
     "test": "react-scripts test --env=jsdom",
     "test:ci": "yarn run lint && yarn test && yarn run coverage",
-    "coverage": "yarn run test -- --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js --collectCoverageFrom=!src/registerServiceWorker.js",
+    "coverage": "yarn run test -- --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js --collectCoverageFrom=!src/registerServiceWorker.js --collectCoverageFrom=!src/AnaSayfa.js",
     "postcoverage": "istanbul check-coverage --statements 90 --functions 90 --branches 90 --lines 90",
     "eject": "react-scripts eject"
   },
