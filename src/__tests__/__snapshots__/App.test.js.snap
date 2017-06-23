@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
   <p
     className="App-intro"
   >
-    To get started, editt 
+    To get started, editing 
     <code>
       src/App.js
     </code>
