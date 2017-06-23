@@ -1,5 +1,8 @@
 {
-    "extends": "airbnb",
+    "extends": [
+        "airbnb",
+        "prettier"
+    ],
     "env": {
         "browser": true,
         "jest": true
@@ -16,6 +19,7 @@
         "react/prop-types": 2,
         "react/wrap-multilines": 0,
         "react/jsx-wrap-multilines": 0,
+        "block-closing-brace-newline-before": 0,
         "react/require-extension": 0,
         "no-console": 0,
         "no-param-reassign": 0,

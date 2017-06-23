@@ -1,8 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import { Provider } from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import configureStore from './redux/configureStore';
+
+import App from './components/App';
+
+const store = configureStore(undefined);
+
+const render = Component => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <Component />
+    </Provider>,
+    document.getElementById('root'),
+  );
+};
+
+/* istanbul ignore if */
+if (process.env.NODE_ENV === 'development' && module.hot) {
+  module.hot.accept('./components/App', () => {
+    // eslint-disable-next-line
+    const NextApp = require('./components/App').default;
+    render(NextApp);
+  });
+}
+
+render(App);
